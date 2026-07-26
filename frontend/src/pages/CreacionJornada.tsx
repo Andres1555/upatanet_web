@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import {Header} from './Header';
 import { Modal } from './Modal';
-import { useState } from 'react';
+import React,{ useState } from 'react';
 import './Jornadas.css';
 
 type TipoModal = 'crear' | 'cancelar' | null;
