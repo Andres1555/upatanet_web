@@ -6,8 +6,11 @@ import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const navigate = useNavigate();
+       const handleRegister=()=>{
+         navigate('/register');
+    };
     const handleInicio=()=>{
-         navigate('/HomeJornadas');
+         navigate('/login');
     };
 
     const handleHome=()=>{
@@ -20,7 +23,7 @@ function Home() {
         <nav id="header-home">
             <img src={logo} alt="logo" onClick={handleHome} />
             <ul>
-                <li><a id="button-register" onClick={handleInicio}>REGISTRARSE</a></li>
+                <li><a id="button-register" onClick={handleRegister}>REGISTRARSE</a></li>
                 <li><a id="button-login" onClick={handleInicio}>INICIAR SESIÓN</a></li>
             </ul>
         </nav>

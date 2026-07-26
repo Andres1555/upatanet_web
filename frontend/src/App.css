@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color:#F2ECE0 ;
 }
 
 * {
@@ -501,4 +502,184 @@ margin-left: 2rem;
 
 #space{
   height: 10vh;
+}
+
+.BG-loginRegister{
+width: 100vw;
+height: 100vh;
+background-color:#F2ECE0 ;
+margin:0;
+display: flex;
+flex:1;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.LIR-container{
+  display:flex;
+  flex-direction: column;
+  width: 30vw;
+  min-width: 350px;
+  height: 90vh;
+  max-height: 700px;
+  align-items:center;
+  justify-content:center;
+  border: 3px solid #6b5d4d5e;
+  border-radius: 16px;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.LIR-container:hover{
+  box-shadow: 0px 0px 8px 0.5px #6b5d4d3c;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.LIR-container div{
+margin-top:5%;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 8rem;
+height:8rem;
+background: linear-gradient(180deg, rgba(210, 84, 42, 0.1) 0%, rgba(210, 84, 42, 0.1) 100%);
+border-radius:100%;
+}
+
+.LIR-container svg{
+  width:1.2rem;
+  height:1.2rem;
+  padding-right:2%;
+  margin-bottom: -3%;
+}
+
+ #Layer_1{
+  width:5rem;
+  height:5rem;
+}
+
+.LIR-container h1{
+margin-top:3%;
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 1.8rem;
+color: #2B2118;
+}
+
+.LIR-container label{
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+line-height: 28px;
+color: #6B5D4D;
+align-self: flex-start;
+margin-left: 15%;
+margin-top:4%;
+margin-bottom: 0%;
+}
+
+.LIR-container input{
+width: 70%;
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 0.8rem;
+line-height: 28px;
+color: #2B2118;
+border: none;
+border-bottom: 1px solid #E3DAC8;
+background-color: transparent;
+margin-top:-5%;
+overflow: hidden;
+transition: margin 0.4s ease-in-out;
+}
+
+.LIR-container input:focus,
+.LIR-container input:not(:placeholder-shown){
+margin-top:-1%;
+margin-bottom: -1%;
+outline: none;
+transition: margin 0.5s ease-in-out;
+}
+
+.LIR-container button{
+margin-top:7%;
+width: 70%;
+background: #D2542A;
+border:none;
+border-radius: 100px;
+font-family: 'Roboto', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 1.2rem;
+padding: 0.5rem;
+color: #FFFFFF;
+}
+
+.LIR-container button:hover,
+.LIR-container button:focus
+{
+background:rgb(173, 52, 34);
+outline:none;
+}
+
+#eye-password,
+#eye-password2,
+#eye-password3{
+display:flex;
+height: 0;
+width: 0;
+margin: 0;
+padding: 0;
+margin-right:15%;
+margin-top:-8%;
+margin-bottom:8%;
+background-color: transparent;
+color:#6B5D4D;
+font-size: 2rem;
+align-self: flex-end;
+align-items: flex-start;
+justify-content: flex-end;
+}
+
+#eye-password:hover,
+#eye-password2:hover,
+#eye-password3:hover{
+color:#1C1C1E;
+}
+.LIR-container span{
+font-family: 'Roboto', sans-serif;
+align-self: center;
+font-style: normal;
+font-weight: 400;
+font-size: 0.9rem;
+line-height: 28px;
+color: #2b2118bf;
+margin-top:5%;
+margin-bottom:5%;
+}
+
+.LIR-container a{
+color:#2B2118;
+text-decoration: underline;
+text-decoration-color: #2B2118;
+}
+
+.LIR-container a:hover{
+color:#D2542A;
+text-decoration: underline;
+text-decoration-color: #D2542A;
+}
+
+#password,#password2,#password3{
+padding-right: 2rem;
+}
+
+#logo-LR{
+  position:absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 8rem;
 }
