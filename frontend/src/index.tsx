@@ -40,7 +40,8 @@ function Home() {
                  <img id="introduction-img-home" src={people} alt="Ilustración de Cogni-AI" />
                 <p id="introduction-home">
                     <h1>Upatanet, disminuyendo las brechas</h1>
-                    Upatanet es un proyecto realizado con el fin de hacer llegar la información hacia los rincones más lejanos del Amazonas. Registra tu jornada y permite que las comunicades indígenas se enteren y mejore su calidad de vida.                </p>
+                    Upatanet es un proyecto realizado con el fin de hacer llegar la información hacia los rincones más lejanos del Amazonas. Registra tu jornada y permite que las comunicades indígenas se enteren y mejore su calidad de vida.                
+                </p>
             </div>
         </section>
     <div id="space"></div>

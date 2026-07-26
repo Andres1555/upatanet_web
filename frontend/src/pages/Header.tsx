@@ -1,4 +1,3 @@
-import React from 'react';
 import Logo from '../assets/Logo.svg'
 import User from '../assets/USER.svg'
 
