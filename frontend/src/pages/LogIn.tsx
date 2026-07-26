@@ -82,6 +82,9 @@ function LogIn() {
     const handleHome=()=>{
          navigate('/');
     };
+    const handleRegister=()=>{
+         navigate('/register');
+    };
 
   return (
   
@@ -119,7 +122,7 @@ function LogIn() {
        <input type={showPassword ? "text" : "password"} id="password" name="password" placeholder=" " value={password} onChange={(e) => setPassword(e.target.value)} required/>
        <button id="eye-password" type="button" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FontAwesomeIcon icon={faEyeSlash} />:<FontAwesomeIcon icon={faEye} />}</button>
       <button type="submit">INICIAR SESIÓN</button>
-      <span>¿No tienes cuenta? <a href="/register">Regístrate aquí</a></span>
+      <span>¿No tienes cuenta? <a onClick={handleRegister}>Regístrate aquí</a></span>
     </form>
   </div>
   )

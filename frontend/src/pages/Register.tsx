@@ -109,6 +109,10 @@ function Register() {
     const handleHome=()=>{
          navigate('/');
     };
+    
+    const handleLogin=()=>{
+         navigate('/login');
+    };
 
   return (
      <div className="BG-loginRegister">
@@ -156,7 +160,7 @@ function Register() {
        <button id="eye-password3" type="button" onClick={() => setRightPassword(!rightPassword)}>{rightPassword ? <FontAwesomeIcon icon={faEyeSlash} />:<FontAwesomeIcon icon={faEye} />}</button>
        {/* {ConfirmPasswordError && (<ValidationError message={ConfirmPasswordError} />)} */}
        <button type="submit">Registrarse</button>
-      <span>¿Ya tienes cuenta? <a href="/login">Inicia sesión aquí</a></span>
+      <span>¿Ya tienes cuenta? <a onClick={handleLogin}>Inicia sesión aquí</a></span>
     </form>
   </div>
   )
