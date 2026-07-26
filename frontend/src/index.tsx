@@ -47,7 +47,11 @@ function Home() {
                 </p>
             </div>
         </section>
-    <div id="space"></div>
+        <div id="space"></div>
+        <div id="footer-home">
+            <hr></hr>
+            <img src={logo} alt="logo" />
+        </div>
     </div>
 
   )
