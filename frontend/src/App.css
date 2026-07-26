@@ -147,6 +147,7 @@ font-size:1.8rem;
   justify-content: space-around;
   align-items:center;
   background-color: #F2E9D8;
+  box-shadow: 0px 3px 4px rgba(165, 139, 112, 0.25);
   z-index: 1000;
 }
 
