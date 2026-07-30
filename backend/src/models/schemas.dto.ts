@@ -1,170 +1,168 @@
-//aca van los dtos de cada estructura de las tablas
+// ─── Usuario ───
+export interface CreateUsuarioDTO {
+  nombre?: string;
+  apellido?: string;
+  rol?: string;
+  correo?: string;
+  telefono?: string;
+  cedula?: string;
+  c_i?: string;
+  centro_medico_id?: number;
+}
+export interface UpdateUsuarioDTO extends Partial<CreateUsuarioDTO> {
+  correo?: string;
+  telefono?: string;
+  cedula?: string;
+  c_i?: string;
+  centro_medico_id?: number;
+}
+export interface UsuarioResponse {
+  id: number;
+  nombre: string | null;
+  apellido: string | null;
+  rol: string | null;
+  correo?: string | null;
+  telefono?: string | null;
+  cedula?: string | null;
+  c_i?: string | null;
+  centro_medico_id?: number | null;
+}
 
+// ─── Admin ───
+export interface CreateAdminDTO {
+  usuario_id: number;
+  correo: string;
+  contrasena: string;
+  telefono?: string;
+  cedula?: string;
+}
+export interface UpdateAdminDTO extends Partial<CreateAdminDTO> {}
+export interface AdminResponse {
+  id: number;
+  usuario_id: number | null;
+  correo: string | null;
+  telefono: string | null;
+  cedula: string | null;
+}
+export interface AdminLoginDTO {
+  correo: string;
+  contrasena: string;
+}
 
+// ─── Representante ───
+export interface CreateRepresentanteDTO {
+  usuario_id: number;
+  centro_medico_id: number;
+  correo: string;
+  c_i?: string;
+  contrasena: string;
+}
+export interface UpdateRepresentanteDTO extends Partial<CreateRepresentanteDTO> {}
+export interface RepresentanteResponse {
+  id: number;
+  usuario_id: number | null;
+  centro_medico_id: number | null;
+  correo: string | null;
+  c_i: string | null;
+}
+
+// ─── Indígena ───
+export interface CreateIndigenaDTO {
+  usuario_id: number;
+  comunidad_id: number;
+}
+export interface UpdateIndigenaDTO extends Partial<CreateIndigenaDTO> {}
+export interface IndigenaResponse {
+  id: number;
+  usuario_id: number | null;
+  comunidad_id: number | null;
+}
+
+// ─── Comunidad ───
 export interface CreateComunidadDTO {
   nombre?: string;
-  latitud?: number;
-  longitud?: number;
+  latitud?: string;
+  longitud?: string;
 }
-export interface UpdateComunidadDTO extends Partial<CreateComunidadDTO> { }
+export interface UpdateComunidadDTO extends Partial<CreateComunidadDTO> {}
 export interface ComunidadResponse {
-  id: string;
+  id: number;
   nombre: string | null;
-  latitud: number | null;
-  longitud: number | null;
-  reloj_logico: string | null;
+  latitud: string | null;
+  longitud: string | null;
 }
 
-
-export interface CreateComunidadVecinaDTO {
-  comunidad_id: string;
-  vecina_id: string;
-}
-export type UpdateComunidadVecinaDTO = Partial<CreateComunidadVecinaDTO>;
-export interface ComunidadVecinaResponse {
-  comunidad_id: string;
-  vecina_id: string;
-}
-
-
-export interface CreateUserDTO {
-  nombre: string;
-  email: string;
-  password: string;
-  titulo?: string;
-  comunidad_id?: string;
-  id_nodo?: string;
-  idioma?: string;
-}
-export interface UpdateUserDTO extends Partial<CreateUserDTO> { }
-export interface UserResponse {
-  id: string;
-  nombre: string | null;
-  email: string;
-  titulo: string | null;
-  comunidad_id: string | null;
-  id_nodo: string | null;
-  idioma: string | null;
-  reloj_logico: string | null;
-}
-export interface UserLoginDTO {
-  email: string;
-  password: string;
-}
-
-export interface CreateCategoriaAlertaDTO {
-  codigo: string;
-  etiqueta?: string;
-  color_hex?: string;
-  descripcion?: string;
-}
-export interface UpdateCategoriaAlertaDTO extends Partial<CreateCategoriaAlertaDTO> { }
-export interface CategoriaAlertaResponse {
-  codigo: string;
-  etiqueta: string | null;
-  color_hex: string | null;
-  descripcion: string | null;
-}
-
-
-export interface CreateReporteDTO {
-  titulo?: string;
-  cuerpo?: string;
-  categoria_codigo?: string;
-  autor_id?: string;
-  comunidad_id?: string;
-  latitud?: number;
-  longitud?: number;
-  ttl?: number;
-  nodo_origen?: string;
-}
-export interface UpdateReporteDTO extends Partial<CreateReporteDTO> {
-  eliminado?: number;
-}
-export interface ReporteResponse {
-  id: string;
-  titulo: string | null;
-  cuerpo: string | null;
-  categoria_codigo: string | null;
-  autor_id: string | null;
-  comunidad_id: string | null;
-  latitud: number | null;
-  longitud: number | null;
-  creado_en: string | null;
-  reloj_logico: string | null;
-  ttl: number | null;
-  nodo_origen: string | null;
-  eliminado: number | null;
-}
-
-
-export interface CreateCentroSaludDTO {
+// ─── Centro Médico ───
+export interface CreateCentroMedicoDTO {
   nombre?: string;
-  comunidad_id?: string;
-  contacto?: string;
+  correo?: string;
+  ubicacion?: string;
+  rif?: string;
+  telefono?: string;
 }
-export interface UpdateCentroSaludDTO extends Partial<CreateCentroSaludDTO> { }
-export interface CentroSaludResponse {
-  id: string;
+export interface UpdateCentroMedicoDTO extends Partial<CreateCentroMedicoDTO> {}
+export interface CentroMedicoResponse {
+  id: number;
   nombre: string | null;
-  comunidad_id: string | null;
-  contacto: string | null;
-  reloj_logico: string | null;
+  correo: string | null;
+  ubicacion: string | null;
+  rif: string | null;
+  telefono: string | null;
 }
 
-
-export interface CreateTipoJornadaDTO {
-  codigo: string;
-  etiqueta?: string;
-}
-export interface UpdateTipoJornadaDTO extends Partial<CreateTipoJornadaDTO> { }
-export interface TipoJornadaResponse {
-  codigo: string;
-  etiqueta: string | null;
-}
-
-
-export interface CreateJornadaMedicaDTO {
-  nombre?: string;
-  tipo_codigo?: string;
+// ─── Noticia ───
+export interface CreateNoticiaDTO {
+  usuario_id: number;
+  titulo?: string;
   descripcion?: string;
-  fecha_inicial?: string;
-  fecha_final?: string;
-  centro_salud_id?: string;
-  comunidad_id?: string;
-  latitud?: number;
-  longitud?: number;
+  categoria?: string;
 }
-export interface UpdateJornadaMedicaDTO extends Partial<CreateJornadaMedicaDTO> {
-  eliminado?: number;
+export interface UpdateNoticiaDTO extends Partial<CreateNoticiaDTO> {
+  likes?: number;
+  dislikes?: number;
 }
-export interface JornadaMedicaResponse {
-  id: string;
-  nombre: string | null;
-  tipo_codigo: string | null;
+export interface NoticiaResponse {
+  id: number;
+  usuario_id: number | null;
+  titulo: string | null;
   descripcion: string | null;
-  fecha_inicial: string | null;
-  fecha_final: string | null;
-  centro_salud_id: string | null;
-  comunidad_id: string | null;
-  latitud: number | null;
-  longitud: number | null;
-  creado_en: string | null;
-  reloj_logico: string | null;
-  eliminado: number | null;
+  categoria: string | null;
+  datetime: string | null;
+  likes: number | null;
+  dislikes: number | null;
+  userReaction?: string | null;
 }
 
-
-export interface CreateVerificacionDTO {
-  reporte_id?: string;
-  usuario_id?: string;
-  valor?: number;
+// ─── Alarma ───
+export interface CreateAlarmaDTO {
+  usuario_id: number;
+  noticia_id: number;
+  datetime_inicio?: string;
 }
-export interface UpdateVerificacionDTO extends Partial<CreateVerificacionDTO> { }
-export interface VerificacionResponse {
-  id: string;
-  reporte_id: string | null;
-  usuario_id: string | null;
-  valor: number | null;
-  reloj_logico: string | null;
+export interface UpdateAlarmaDTO extends Partial<CreateAlarmaDTO> {}
+export interface AlarmaResponse {
+  id: number;
+  usuario_id: number | null;
+  noticia_id: number | null;
+  datetime_inicio: string | null;
+}
+
+// ─── Jornada ───
+export interface CreateJornadaDTO {
+  centro_medico_id: number;
+  titulo?: string;
+  descripcion?: string;
+  datetime_inicio?: string;
+  datetime_fin?: string;
+  ubicacion?: string;
+}
+export interface UpdateJornadaDTO extends Partial<CreateJornadaDTO> {}
+export interface JornadaResponse {
+  id: number;
+  centro_medico_id: number | null;
+  titulo: string | null;
+  descripcion: string | null;
+  datetime_inicio: string | null;
+  datetime_fin: string | null;
+  ubicacion: string | null;
 }

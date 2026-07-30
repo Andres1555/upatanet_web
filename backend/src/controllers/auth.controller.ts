@@ -15,7 +15,14 @@ export async function login(req: Request, res: Response) {
 }
 
 export async function getProfile(req: Request, res: Response) {
-  const userId = (req as AuthRequest).userId!;
-  const user = await authService.getProfile(userId);
+  const usuarioId = (req as AuthRequest).usuarioId!;
+  const user = await authService.getProfile(usuarioId);
   res.json(user);
+}
+
+export async function updateCentroMedico(req: Request, res: Response) {
+  const usuarioId = (req as AuthRequest).usuarioId!;
+  const { centro_medico_id } = req.body;
+  const result = await authService.updateCentroMedico(usuarioId, centro_medico_id);
+  res.json(result);
 }
